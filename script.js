@@ -56,7 +56,14 @@ sceltaPc = randomNumber();
 console.log(sceltaPc)
 
 
-console.log(sum(sceltaGiocatore, sceltaPc))
+
+if ((sceltaGiocatore % 2 === 0 && sum(sceltaGiocatore, sceltaPc) % 2 === 0) ||
+    (sceltaGiocatore % 2 !== 0 && sum(sceltaGiocatore, sceltaPc) % 2 !== 0)) {
+  console.log("Vince il giocatore");
+} else if ((sceltaPc % 2 === 0 && sum(sceltaGiocatore, sceltaPc) % 2 === 0) ||
+           (sceltaPc % 2 !== 0 && sum(sceltaGiocatore, sceltaPc) % 2 !== 0)) {
+  console.log("Vince il PC");
+}
 
 
 
@@ -83,5 +90,5 @@ function sum(num1, num2){
  */
 function randomNumber() {
   let num = Math.floor(Math.random() * 5) + 1;
-  console.log(num);
+  return num;
 }
