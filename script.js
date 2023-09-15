@@ -68,6 +68,7 @@ console.log(sum(sceltaGiocatore, sceltaPc))
  * @returns 
  */
 function sum(num1, num2){
+  const somma = num1 + num2
   if ((num1 + num2) % 2 === 0) {
     return "la somma è dispari";
   } else {
