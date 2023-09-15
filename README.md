@@ -20,8 +20,16 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 
-- chiedo all'utente con un prompt se sceglie pari o dispari;
-- creare una variabile che prenda il numero dall'utente;
-- creo una funzione per generare un numero random;
-- creo un'altra funzione per stabilire se la somma dei due numeri è pari o dispari;
-- stampo il risultato 
+1 - chiedo all'utente con un prompt se sceglie pari o dispari e che prenda anche il numero dall'utente; L’utente può scegliere tra pari o dispari e inserisce un numero da 1 a 5;
+
+2 - Creo una funzione che generi un numero random;
+
+3 - definisco quindi la scelta del Pc usando la funzione creata;
+
+4 - creo una funzione per stabilire se una somma di due numeri è pari o dispari;
+
+5 - uso la funzione per sommare i numeri inseriti;
+
+6 - stabilisco le condizioni di vincita o perdita ( 4 possibilità);
+
+7 - comunico chi ha vinto.
