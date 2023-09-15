@@ -69,8 +69,7 @@ if ((numeroGiocatorePari && sommaPari) || (numeroGiocatoreDispari && sommaDispar
 }
 
 
-
-//2. generare un numero random per il PC
+//2. genero un numero random 
 /**
  * 
  * @param {number} 
@@ -82,7 +81,7 @@ function randomNumber() {
 }
 
 
-//4. stabilire se la somma dei due numeri è pari o dispari
+//4. stabilire se una somma di due numeri è pari o dispari
 /**
  * 
  * @param {number} 
