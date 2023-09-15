@@ -1,9 +1,6 @@
 const insertedWord = document.getElementById("insertedWord").value;
-
 let reversedWord = insertedWord.split('').reverse().join('');
-
 let output = document.getElementById("output");
-
 const button = document.querySelector("button");
 
 
@@ -26,12 +23,6 @@ function palindromeWord(stringa) {
 
 
 // **Pari e Dispari**
-
-// L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
-// Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
-// Sommiamo i due numeri
-// Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-// Dichiariamo chi ha vinto.
 
 
 // 1- chiedo all'utente con un prompt se sceglie pari o dispari e che prenda anche il numero dall'utente; L’utente può scegliere tra pari o dispari e inserisce un numero da 1 a 5.
