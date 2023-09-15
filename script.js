@@ -64,17 +64,15 @@ const numeroPcDispari = (sceltaPc % 2) !== 0;
 const sommaPari = sum(sceltaGiocatore, sceltaPc) % 2 === 0;
 const sommaDispari = sum(sceltaGiocatore, sceltaPc) % 2 !== 0;
 
-if (numeroGiocatorePari && sommaPari) || (numeroGiocatoreDispari && sommaDispari){
+if ((numeroGiocatorePari && sommaPari) || (numeroGiocatoreDispari && sommaDispari)) {
   console.log("Hai vinto tu");
-} else if (numeroGiocatorePari && sommaDispari) || (numeroGiocatoreDispari && sommaPari){
+} else if ((numeroGiocatorePari && sommaDispari) || (numeroGiocatoreDispari && sommaPari)) {
   console.log("vince il pc");
-} else if (numeroPcPari && sommaPari) || (numeroPcDispari && sommaDispari){
+} else if ((numeroPcPari && sommaPari) || (numeroPcDispari && sommaDispari)) {
   console.log("vince il pc");
-} else if (numeroPcPari && sommaDispari) || (numeroPcDispari && sommaPari){
+} else if ((numeroPcPari && sommaDispari) || (numeroPcDispari && sommaPari)) {
   console.log("vince il giocatore");
 }
-
-
 
 
 
