@@ -33,10 +33,8 @@ function palindromeWord(stringa) {
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-// - chiedo all'utente con un prompt se sceglie pari o dispari in una variabile che prenda anche il numero dall'utente;
-// - creo una funzione per generare un numero random;
-// - creo un'altra funzione per stabilire se la somma dei due numeri è pari o dispari;
-// - stampo il risultato in base alle due possibilità
+
+// 1- chiedo all'utente con un prompt se sceglie pari o dispari e che prenda anche il numero dall'utente; L’utente può scegliere tra pari o dispari e inserisce un numero da 1 a 5.
 
 let sceltaGiocatore;
 
@@ -51,11 +49,16 @@ do {
 
 console.log(sceltaGiocatore);
 
+// 3. definisco quindi la scelta del Pc usando la funzione creata (punto 2)
+
 sceltaPc = randomNumber();
 console.log(sceltaPc);
 
+// 5. uso la funzione per sommare i numeri inseriti
+
 console.log(sum(sceltaGiocatore, sceltaPc));
 
+// 6. stabilisco le condizioni di vincita o perdita ( 4 possibilità)
 
 const numeroGiocatorePari = (sceltaGiocatore % 2) === 0;
 const numeroGiocatoreDispari = (sceltaGiocatore % 2) !== 0;
@@ -76,7 +79,19 @@ if ((numeroGiocatorePari && sommaPari) || (numeroGiocatoreDispari && sommaDispar
 
 
 
-// stabilire se la somma dei due numeri è pari o dispari
+//2. generare un numero random per il PC
+/**
+ * 
+ * @param {number} 
+ * @returns 
+ */
+function randomNumber() {
+  let num = Math.floor(Math.random() * 5) + 1;
+  return num;
+}
+
+
+//4. stabilire se la somma dei due numeri è pari o dispari
 /**
  * 
  * @param {number} 
@@ -89,15 +104,4 @@ function sum(num1, num2){
   } else {
     return "la somma è dispari";
   }
-}
-
-// generare un numero random per il PC
-/**
- * 
- * @param {number} 
- * @returns 
- */
-function randomNumber() {
-  let num = Math.floor(Math.random() * 5) + 1;
-  return num;
 }
