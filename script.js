@@ -8,7 +8,6 @@ button.addEventListener("click", function(){
   palindromeWord(insertedWord);
 })
 
-
 /**
  * 
  * @param {string} 
@@ -18,7 +17,6 @@ function palindromeWord(stringa) {
   if (stringa === reversedWord) {
     output.innerHTML = "la parola è palindroma";
   } else output.innerHTML = "la parola non è palindroma";
-
 }
 
 
@@ -69,6 +67,8 @@ if ((numeroGiocatorePari && sommaPari) || (numeroGiocatoreDispari && sommaDispar
 }
 
 
+
+
 //2. genero un numero random 
 /**
  * 
@@ -79,6 +79,7 @@ function randomNumber() {
   let num = Math.floor(Math.random() * 5) + 1;
   return num;
 }
+
 
 
 //4. stabilire se una somma di due numeri è pari o dispari
