@@ -25,7 +25,6 @@ function palindromeWord(stringa) {
 }
 
 
-
 // **Pari e Dispari**
 
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
@@ -37,7 +36,7 @@ function palindromeWord(stringa) {
 // - chiedo all'utente con un prompt se sceglie pari o dispari in una variabile che prenda anche il numero dall'utente;
 // - creo una funzione per generare un numero random;
 // - creo un'altra funzione per stabilire se la somma dei due numeri è pari o dispari;
-// - stampo il risultato 
+// - stampo il risultato in base alle due possibilità
 
 let sceltaGiocatore;
 
@@ -53,17 +52,29 @@ do {
 console.log(sceltaGiocatore);
 
 sceltaPc = randomNumber();
-console.log(sceltaPc)
+console.log(sceltaPc);
+
+console.log(sum(sceltaGiocatore, sceltaPc));
 
 
+const numeroGiocatorePari = (sceltaGiocatore % 2) === 0;
+const numeroGiocatoreDispari = (sceltaGiocatore % 2) !== 0;
+const numeroPcPari = (sceltaPc % 2) === 0;
+const numeroPcDispari = (sceltaPc % 2) !== 0;
+const sommaPari = sum(sceltaGiocatore, sceltaPc) % 2 === 0;
+const sommaDispari = sum(sceltaGiocatore, sceltaPc) % 2 !== 0;
 
-if ((sceltaGiocatore % 2 === 0 && sum(sceltaGiocatore, sceltaPc) % 2 === 0) ||
-    (sceltaGiocatore % 2 !== 0 && sum(sceltaGiocatore, sceltaPc) % 2 !== 0)) {
-  console.log("Vince il giocatore");
-} else if ((sceltaPc % 2 === 0 && sum(sceltaGiocatore, sceltaPc) % 2 === 0) ||
-           (sceltaPc % 2 !== 0 && sum(sceltaGiocatore, sceltaPc) % 2 !== 0)) {
-  console.log("Vince il PC");
+if (numeroGiocatorePari && sommaPari) || (numeroGiocatoreDispari && sommaDispari){
+  console.log("Hai vinto tu");
+} else if (numeroGiocatorePari && sommaDispari) || (numeroGiocatoreDispari && sommaPari){
+  console.log("vince il pc");
+} else if (numeroPcPari && sommaPari) || (numeroPcDispari && sommaDispari){
+  console.log("vince il pc");
+} else if (numeroPcPari && sommaDispari) || (numeroPcDispari && sommaPari){
+  console.log("vince il giocatore");
 }
+
+
 
 
 
