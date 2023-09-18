@@ -23,7 +23,6 @@ function palindromeWord(stringa) {
 // **Pari e Dispari**
 
 
-
 let sceltaGiocatore = " ";
 
 do {
@@ -50,15 +49,13 @@ const result = evenOrOdd(sceltaGiocatoreNumero, sceltaPc);
 
   console.log(result);
 
-if ((result === "la somma è pari" && sceltaGiocatore === "pari") || (result === "la somma è dispari" && sceltaGiocatore === "dispari")) {
-  console.log("Hai vinto!");
-} else {
-  console.log("Il computer ha vinto!");
-}
+if ((result && sceltaGiocatore === "pari") || (!result && sceltaGiocatore === "dispari")) {
+    console.log("Hai vinto!");
+  } else {
+    console.log("Il computer ha vinto!");
+  }
 
 //*************/ functions**************
-
-
 
 
 
@@ -84,9 +81,9 @@ function randomNumber() {
 function evenOrOdd(num1, num2) {
   const sum = num1 + num2;
   if (sum % 2 === 0) {
-    return "la somma è pari";
+    return "pari";
   } else {
-    return "la somma è dispari";
+    return "dispari";
   }
 }
 
